@@ -1,0 +1,497 @@
+.testimonial-section {
+    position: relative;
+    background: $bg-color;
+    border-top: 1px solid $border-color;
+
+    .star-shape {
+        position: absolute;
+        top: -10%;
+        left: 5%;
+    
+    }
+
+    .line-shape {
+        position: absolute;
+        top: 15%;
+        right: 5%;
+        animation: 4s ease 0s infinite alternate forwards running tpswing;
+    }
+}
+
+.testimonial-card-items {
+    margin-top: 30px;
+    background-color: $white;
+    border-radius: 10px;
+    padding: 40px;
+    position: relative;
+
+    .dot-shape {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .icon {
+        position: absolute;
+        right: 40px;
+        top: 30px;
+    }
+
+    .star {
+        margin-bottom: 15px;
+
+        i {
+            color: $theme-color;
+        }
+
+        .text-color {
+            color: #E7E7EB;
+        }
+    }
+
+    .client-info {
+        @include flex;
+        gap: 20px;
+        margin-top: 40px;
+
+        @include breakpoint (max-md){
+            margin-top: 30px;
+        }
+
+        @include breakpoint (max-sm){
+            margin-top: 20px;
+        }
+
+        .client-img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+        }
+
+        .client-content {
+            h5 {
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    &.style-2 {
+        margin-top: 0;
+        padding: 60px 50px;
+        background-color: #f9f9f9;
+        box-shadow: none;
+
+        @include breakpoint (max-md){
+            padding: 40px 30px;
+        }
+
+        @include breakpoint (max-sm){
+            padding: 30px 25px;
+        }
+
+        .star {
+            i {
+                color: $ratting-color;
+            }
+
+            .text-color {
+                color: #E7E7EB;
+            }
+        }
+    }
+}
+
+.testimonial-left-area {
+    .array-button {
+        .array-prev {
+            background-color: $theme-color-2;
+
+            &:hover {
+                background-color: $white;
+                color: $theme-color-2;
+            }
+        }
+
+        .array-next {
+            color: $theme-color-2;
+
+            &:hover {
+                color: $white;
+                background-color: $theme-color-2;
+            }
+        }
+    }
+}
+
+.testimonial-right-area {
+    margin-right: -70%;
+
+    @include breakpoint (max-md){
+        margin-right: 0;
+    }
+}
+
+.tesimonial-section-2 {
+    position: relative;
+
+    .array-button {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10%;
+
+        @include breakpoint (max-md){
+            display: none;
+        }
+    }
+}
+
+.testimonial-box-items {
+    position: relative;
+    z-index: 9;
+    margin-top: 30px;
+    background-color: $white;
+    box-shadow: $shadow;
+    padding: 40px;
+    margin-bottom: 20px;
+
+    @include breakpoint (max-sm){
+        padding: 30px;
+    }
+
+    .icon {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+
+    .client-items {
+        @include flex;
+        gap: 20px;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 9;
+
+        .client-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+
+            &.style-2 {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        .client-content {
+            h4 {
+                margin-bottom: 5px;
+            }
+
+            .star {
+                margin-top: 5px;
+
+                i {
+                    color: $theme-color-3;
+                }
+
+                .color-text {
+                    color: $text-color;
+                    opacity: 0.4;
+                }
+            }
+        }
+    }
+}
+
+.testimonial-wrapper {
+    .testimonial-content {
+        @include breakpoint (max-md){
+            text-align: center;
+        }
+        .content {
+            .icon-top {
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    content: "";
+                    border: 1px solid $border-color;
+                    width: 100%;
+                    height: 1px;
+                    z-index: -1;
+                }
+            }
+            .icon {
+                width: 65px;
+                height: 65px;
+                font-size: 28px;
+                line-height: 75px;
+                border-radius: 50%;
+                border: 1px solid $border-color;
+                color: $theme-color;
+                text-align: center;
+                margin: 0 auto 30px;
+                text-align: center;
+                background-color: $white;
+
+            }
+
+            .star {
+                margin-bottom: 20px;
+
+                span {
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: $header-color;
+                    display: inline-block;
+                    margin-right: 10px;
+                }
+
+                i {
+                    font-size: 16px;
+                    color: #F8941F;
+                }
+            }
+
+            h3 {
+                font-size: 35px;
+
+                @include breakpoint (max-xl){
+                    font-size: 30px;
+                }
+               
+                @include breakpoint (max-lg){
+                    font-size: 28px;
+                }
+
+                @include breakpoint (max-md){
+                    font-size: 24px;
+                }
+
+                @include breakpoint (max-sm){
+                    font-size: 22px;
+                }
+            }
+
+            .client-info {
+                margin-top: 35px;
+
+                p {
+                    font-size: 14px;
+                    color: $header-color;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    .testimonial-image-items {
+        position: relative;
+
+        .box-shape {
+            position: absolute;
+            top: 50%;
+            left: -40%;
+            transform: translateY(-50%);
+            z-index: 1;
+
+            @include breakpoint (max-lg){
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+        }
+
+        .client-img-1 {
+            width: 190px;
+            height: 190px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+
+            @include breakpoint (max-md){
+                text-align: center;
+                margin: 0 auto 20px;
+            }
+        }
+
+        .client-img-2 {
+            width: 190px;
+            height: 190px;
+            border-radius: 95px;
+            margin-bottom: 20px;
+
+            @include breakpoint (max-md){
+                text-align: center;
+                margin: 0 auto 20px;
+            }
+        }
+
+        .client-img-3 {
+            width: 190px;
+            height: 250px;
+            border-radius: 95px;
+
+            @include breakpoint (max-md){
+                text-align: center;
+                margin: 0 auto;
+            }
+        }
+
+        .client-img-4 {
+            width: 190px;
+            height: 230px;
+            border-radius: 95px;
+            margin-bottom: 20px;
+
+            @include breakpoint (max-md){
+                text-align: center;
+                margin: 0 auto 20px;
+            }
+        }
+
+        .client-img-5 {
+            width: 190px;
+            height: 190px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+
+            @include breakpoint (max-md){
+                text-align: center;
+                margin: 0 auto 20px;
+            }
+        }
+
+        .client-img-6 {
+            width: 190px;
+            height: 190px;
+            border-radius: 95px;
+
+            @include breakpoint (max-md){
+                text-align: center;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+.testimonial-wrapper-2 {
+    background-color: #F8F2EC;
+    border-radius: 10px;
+    padding: 0 80px;
+    margin-top: 95px;
+    @include flex;
+    justify-content: space-between;
+
+    @include breakpoint (max-xl){
+       padding: 0 50px;
+    }
+
+    @include breakpoint (max-lg){
+       flex-wrap: wrap;
+       gap: 30px;
+       padding: 40px;
+    }
+
+    @include breakpoint (max-md){
+        margin-top: 30px;
+        padding: 30px;
+    }
+
+    .content {
+        max-width: 700px;
+
+        @include breakpoint (max-lg){
+           text-align: center;
+           margin: 0 auto;
+        }
+
+        .icon {
+            font-size: 70px;
+            color: $theme-color-3;
+            margin-bottom: 30px;
+        }
+        
+        .star {
+            margin-bottom: 20px;
+
+            span {
+                font-size: 20px;
+                font-weight: 600;
+                color: $header-color;
+                display: inline-block;
+                margin-right: 20px;
+            }
+
+            color: $theme-color-3;
+        }
+
+        h3 {
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 140%;
+
+            @include breakpoint (max-xxl){
+                font-size: 28px;
+            }
+
+            @include breakpoint (max-xl){
+                font-size: 20px;
+            }
+
+            @include breakpoint (max-lg){
+                font-size: 24px;
+            }
+
+            @include breakpoint (max-md){
+                font-size: 22px;
+            }
+
+            @include breakpoint (max-sm){
+                font-size: 20px;
+            }
+        }
+
+        .client-content {
+            margin-top: 30px;
+
+            h4 {
+                color: $theme-color-3;
+            }
+
+            p {
+                font-size: 14px;
+                color: $header-color;
+            }
+        }
+    }
+
+    .thumb {
+        max-width: 400px;
+        text-align: center;
+        position: relative;
+        text-align: center;
+        z-index: 1;
+        margin-top: -30px;
+
+        @include breakpoint (max-lg){
+            text-align: center;
+            margin: 0 auto 0;
+            max-width: 700px;
+        }
+
+        .bg-shape {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: -1;
+
+            @include breakpoint (max-xxs){
+                display: none;
+            }
+        }
+    }
+}

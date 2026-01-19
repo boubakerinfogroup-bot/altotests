@@ -1,0 +1,487 @@
+
+
+.counter-section {
+    position: relative;
+    z-index: 9;
+
+    .line-shape {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+}
+
+.counter-wrapper {
+    @include flex;
+    justify-content: space-between;
+    margin-bottom: -35px;    
+
+    @include breakpoint (max-lg){
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .counter-items {
+    
+        .icon {
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            border-radius: 50%;
+            background: $theme-color;
+            margin: 0 auto;
+
+            @include breakpoint (max-sm){
+                width: 85px;
+                height: 85px;
+                line-height: 85px;
+            }
+
+            &.bg-2 {
+                background: $theme-color-2;
+            }
+
+            &.bg-3 {
+                background: $theme-color-3;
+            }
+
+            &.bg-4 {
+                background: #F69B17;
+            }
+        }
+    
+        .content {
+            text-align: center;
+            margin: 30px auto;
+    
+            h2 {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+.counter-section-2 {
+    position: relative;
+    z-index: 9;
+
+    &::before {
+        @include before;
+        height: 50%;
+        background-color: $bg-color;
+        z-index: -1;
+    }
+}
+
+.counter-wrapper-2 {
+    background-color: $white;
+    box-shadow: $shadow;
+    padding: 60px 50px;
+
+    .counter-box-items {
+        border: 1px solid $border-color;
+        border-radius: 5px;
+        padding: 20px;
+        @include flex;
+        gap: 20px;
+    }
+
+    &.style-2 {
+        margin-top: -120px;
+        position: relative;
+        z-index: 9;
+        background-color: $white;
+    }
+}
+
+.work-card-items {
+    margin-top: 30px;
+    position: relative;
+    text-align: center;
+
+    .icon {
+        width: 120px;
+        height: 120px;
+        line-height: 120px;
+        text-align: center;
+        border-radius: 50%;
+        background-color: $white;
+        box-shadow: $shadow;
+        position: relative;
+        margin: 0 auto;
+        font-size: 48px;
+        color: $theme-color-2;
+
+        .number {
+            width: 34px;
+            height: 34px;
+            line-height: 34px;
+            text-align: center;
+            border-radius: 50%;
+            background-color: $theme-color-2;
+            color: $white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-weight: 400;
+        }
+    }
+
+    .content {
+        margin-top: 30px;
+
+        h3 {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.main-choose-us-wrapper {
+	position: relative;
+
+	.choose-us-top {
+		@include flex;
+		justify-content: space-between;
+
+		@include breakpoint (max-xl){
+			flex-wrap: wrap;
+			gap: 30px;
+		}
+
+		@include breakpoint (max-md){
+			justify-content: center;
+			text-align: center;
+		}
+
+		.icon-items {
+			max-width: 220px;
+
+			.icon {
+				width: 130px;
+				height: 130px;
+				line-height: 140px;
+				text-align: center;
+				border-radius: 50%;
+				font-size: 60px;
+				color: $header-color;
+				background-color: $theme-color-2;
+
+				@include breakpoint (max-md){
+					margin: 0 auto;
+				}
+			}
+			.content {
+				margin-top: 50px;
+
+				h2 {
+					font-size: 55px;
+					margin-bottom: 5px;
+				}
+			}
+		}
+	}
+
+	.choose-us-bottom {
+		@include flex;
+		gap: 345px;
+
+		@include breakpoint (max-xl){
+			flex-wrap: wrap;
+			gap: 30px;
+			justify-content: space-between;
+		}
+
+		@include breakpoint (max-md){
+			justify-content: center;
+			text-align: center;
+		}
+
+		.icon-items {
+			max-width: 220px;
+			margin-top: 110px;
+			margin-left: 90px;
+
+			@include breakpoint (max-xl){
+				margin-left: 0;
+				margin-top: 30px;
+			}
+
+			.icon {
+				width: 130px;
+				height: 130px;
+				line-height: 150px;
+				text-align: center;
+				border-radius: 50%;
+				font-size: 60px;
+				color: $white;
+				background-color: $theme-color;
+
+				@include breakpoint (max-md){
+					margin: 0 auto;
+				}
+			}
+			.content {
+				margin-top: 25px;
+
+				h2 {
+					font-size: 55px;
+					margin-bottom: 5px;
+				}
+			}
+
+			&.style-2 {
+				margin-top: -185px;
+				margin-left: 0;
+
+				@include breakpoint (max-xl){
+					margin-top: 0;
+				}
+
+				.icon {
+					background-color: $theme-color-3;
+					color: $header-color;
+				}
+			}
+		}
+	}
+
+	.line-shape {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 60px;
+		z-index: -1;
+
+		@include breakpoint (max-xxl){
+			display: none;
+		}
+
+		img {
+			@include imgw;
+		}
+	}
+}
+
+.choose-us-box-4 {
+	margin-top: 30px;
+	padding: 35px;
+	background-color: $white;
+	position: relative;
+	border-radius: 10px;
+
+	@include breakpoint (max-md){
+		padding: 30px;
+		text-align: center;
+	}
+
+	&::before {
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		width: 0;
+		height: 0;
+		border-top: 1px solid $theme-color-3;
+		border-left: 1px solid $theme-color-3;
+		transition: 0.5s;
+		opacity: 0;
+		visibility: hidden;
+		transform: initial;
+		border-radius: 10px;
+	}
+
+	&::after {
+		position: absolute;
+		content: "";
+		bottom: 0;
+		right: 0;
+		width: 0;
+		height: 0;
+		border-bottom: 1px solid $theme-color-3;
+		border-right: 1px solid $theme-color-3;
+		transition: 0.5s;
+		opacity: 0;
+		visibility: hidden;
+		border-radius: 10px;
+	}
+
+	.icon {
+		font-size: 55px;
+		color: $theme-color-3;
+	}
+
+	.content {
+		margin-top: 30px;
+
+		h4 {
+			margin-bottom: 15px;
+			line-height: 150%;
+            font-size: 24px;
+		}
+
+		p {
+			line-height: 188%;
+		}
+	}
+
+	&:hover {
+		&::after {
+			width: 100%;
+			height: 100%;
+			visibility: visible;
+			opacity: 1;
+		}
+
+		&::before {
+			width: 100%;
+			height: 100%;
+			visibility: visible;
+			opacity: 1;
+			transform: initial;
+			transform-origin: initial;
+		}
+	}
+}
+
+.choose-us-4 {
+    background-color: #F8F2EC;
+}
+
+
+
+
+.choose-us-section-3 {
+	position: relative;
+}
+
+.choose-us-wrapper-3 {
+	.video-image {
+		max-width: 1165px;
+		position: relative;
+
+		img {
+			@include imgw;
+		}
+
+		.video-btn {
+			width: 130px;
+			height: 130px;
+			line-height: 130px;
+			text-align: center;
+			border-radius: 50%;
+			background: linear-gradient(145deg, rgba(255, 255, 255, 0.60) 14.64%, rgba(255, 255, 255, 0.50) 86.55%);
+			border: 1px solid rgba(255, 255, 255, 0.50);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			backdrop-filter: blur(20px);
+			color: $white;
+
+			@include breakpoint (max-md){
+				width: 80px;
+				height: 80px;
+				line-height: 80px;
+			}
+		}
+	}
+
+	.choose-content {
+		background-color:#102F25;
+		padding: 100px;
+		margin-left: -80px;
+		margin-top: 50px;
+		position: relative;
+
+		@include breakpoint (max-xxl){
+			padding: 50px 40px;
+		}
+
+		@include breakpoint (max-lg){
+			margin-left: 0;
+			margin-top: 0;
+			padding: 40px 30px;
+		}
+
+		@include breakpoint (max-md){
+			text-align: center;
+		}
+
+		.circle-shape {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+
+		.icon-items {
+			margin-top: 50px;
+
+			.icon {
+				color: $white;
+				font-size: 50px;
+				margin-bottom: 20px;
+			}
+
+			h3 {
+				color: $white;
+			}
+		}
+	}
+}
+
+.feature-wrapper-3 {
+	background-color: $white;
+	border-radius: 7px;
+	position: relative;
+	z-index: 9;
+
+	@include breakpoint (max-xl4){
+		box-shadow: $shadow;
+	}
+
+    @include breakpoint (max-sm){
+		.feature-wrapper-3 { 
+            padding-bottom: 50px; 
+        }
+	}
+
+	.feature-card-items {
+		text-align: center;
+		border-right: 1px solid $theme-color;
+		padding: 40px 20px;
+
+		@include breakpoint (max-xl){
+			border-right: none;
+			padding: 30px 20px;
+		}
+
+		.icon {
+			font-size: 55px;
+			color: $theme-color;
+		}
+
+		.content {
+			margin-top: 20px;
+
+			h5 {
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	&.style-2 {
+		background-color: $white;
+		box-shadow: 10px 4px 60px rgba(190, 190, 190, 0.25);
+
+		.feature-card-items {
+			border-right: 1px solid $border-color;
+
+			.icon {
+				color: $theme-color;
+			}
+		}
+	}
+}
+

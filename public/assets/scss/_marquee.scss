@@ -1,0 +1,291 @@
+
+.marquee-wrapper {
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: $theme-color-3;
+    transform: rotate(4deg);
+    z-index: 9;
+
+    
+    @include breakpoint (max-lg){
+       transform: rotate(0deg);
+    }
+
+}
+
+.text-slider {
+    font-size: 66px;
+    height: 130px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $white;
+    padding: 50px 0;
+
+    @include breakpoint (max-md){
+        font-size: 45px;
+        padding: 30px 0;
+        height: 90px;
+    }
+
+    &.style-2{
+         color: $white;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: $white;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.marquee-inner {
+    position: absolute;
+    display: inline-flex;
+    width: 200%;
+}
+
+.marquee-list {
+    float: left;
+    width: 50%;
+}
+
+.marquee-item {
+    float: left;
+    transition: animation 0.2s ease-out;
+}
+
+.marquee-inner.to-left {
+    animation: marqueeLeft 25s linear infinite;
+}
+
+@keyframes marqueeLeft {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+.marquee-inner.to-right {
+    animation: marqueeRight 25s linear infinite;
+}
+
+@keyframes marqueeRight {
+    0% {
+       right : 0;
+    }
+    100% {
+        right: -100%;
+    }
+}
+
+
+.scrolling-wrap {
+	overflow: hidden;
+	white-space: nowrap;
+	display: flex;
+	gap: 20px;
+    padding: 15px 0;
+
+	.comm {
+		display: flex;
+		align-items: center;
+		animation: scroll 60s linear infinite;
+		gap: 30px;
+		cursor: pointer;
+
+		.cmn-textslide {
+			font-size: 20px;
+			font-weight: 500;
+			line-height: 32px;
+			text-transform: capitalize;
+            color: $white;
+            font-family: $heading-font;
+            @include flex;
+            gap: 8px;
+
+            i {
+                font-size: 21px;
+            }
+
+            &.text-color-2 {
+                color: $header-color;
+            }
+		}
+	}
+
+	&:hover {
+		.comm {
+			animation-play-state: paused;
+		}
+	}
+
+	@include breakpoint (max-xxl) {
+		.comm {
+			gap: 20px;
+		}
+	}
+
+	@include breakpoint (max-lg) {
+		gap: 14px;
+		.comm {
+			gap: 14px;
+		}
+	}
+
+	@include breakpoint (max-sm) {
+		.comm {
+			gap: 12px;
+		}
+	}
+
+	&.style-2 {
+		margin-top: -175px;
+
+		.comm {
+			.stroke-text {
+				-webkit-text-stroke: 1px $white;
+				-webkit-text-fill-color: transparent;
+				font-size: 200px;
+				font-weight: 600;
+				line-height: 255px;
+				font-family: $heading-font;
+				animation: shine 3s infinite;
+				-webkit-mask-image: linear-gradient(-75deg, rgba(255, 255, 255, 0.07) 50%, #fff 50%, rgba(255, 255, 255, 0.07) 70%);
+                -webkit-mask-size: 200%;
+			}
+		}
+	}
+}
+
+// .mycustom-marque {
+// 	&.style-3 {
+
+// 		.scrolling-wrap {
+// 			padding: 0;
+
+// 			.cmn-textslide {
+// 				font-size: 55px;
+// 				font-weight: 600;
+// 				color: $header-color;
+
+// 				@include breakpoint (max-md){
+// 					font-size: 40px;
+// 				}
+
+//                 @include breakpoint (max-sm){
+// 					font-size: 36px;
+// 				}
+	
+// 				i {
+// 					font-size: 55px;
+// 					color: $theme-red;
+
+//                     @include breakpoint (max-sm){
+//                         font-size: 44px;
+//                     }
+// 				}
+// 			}
+// 		}
+// 	}
+
+// 	&.theme-green-bg-1 {
+// 		background-color: $theme-green;
+// 	}
+
+// 	&.theme-green-bg {
+// 		background-color: $theme-green-3;
+// 	}
+
+// 	&.theme-yellow-bg {
+// 		background-color: $theme-yellow-3;
+
+// 		.scrolling-wrap {
+// 			.comm {
+// 				animation: scrolls 60s linear infinite;
+// 				display: flex;
+// 				align-items: center;
+// 				gap: 30px;
+// 				cursor: pointer;
+// 			}
+// 			.cmn-textslide {
+// 				color: $header-color;
+	
+// 				i {
+// 					color: $header-color;
+// 				}
+// 			}
+// 		}
+// 	}
+
+// 	&.theme-blue-bg-2 {
+// 		background-color: $theme-color-2;
+// 		position: static;
+// 	}
+
+// 	&.style-two {
+// 		.scrolling-wrap {
+// 			&.style-2 {
+// 				margin-top: -155px;
+		
+// 				.comm {
+// 					color:rgba(3, 31, 66, 0.1);
+					
+// 					.stroke-text {
+// 						-webkit-text-stroke: 1px $text-color;
+// 						-webkit-text-fill-color: transparent;
+// 						font-size: 200px;
+// 						font-weight: 600;
+// 						line-height: 255px;
+// 						font-family: $heading-font;
+// 						animation: shine 3s infinite;
+// 						-webkit-mask-image: linear-gradient(-75deg, rgba(3, 31, 66, 0.1) 50%, $text-color 50%, rgba(3, 31, 66, 0.1) 70%);
+// 						-webkit-mask-size: 200%;
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+
+// 	&.header-marque {
+// 		.scrolling-wrap {
+// 			padding: 5px 0;
+// 		}
+// 	}
+// }
+
+@keyframes scroll {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+@keyframes scrolly {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-60%);
+	}
+}
+
+@keyframes scrolls {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(100%);
+	}
+}
+
+@keyframes shine {
+    from {
+      -webkit-mask-position: 150%;
+    }
+    
+    to {
+      -webkit-mask-position: -50%;
+    }
+}

@@ -1,0 +1,77 @@
+.brand-wrapper {
+    h6 {
+        font-size: 22px;
+        position: relative;
+        margin-bottom: 50px;
+        color: $header-color;
+
+        &::before {
+            position: absolute;
+            top: 15px;
+            left: 35px;
+            content: "";
+            height: 1px;
+            width: 480px;
+            background-color: $theme-color-3;
+
+            @include breakpoint (max-xxl){
+                display: none;
+            }
+        }
+
+        &::after {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            content: "";
+            height: 1px;
+            width: 480px;
+            background-color: $theme-color-3;
+
+            @include breakpoint (max-xxl){
+                display: none;
+            }
+        }
+    }
+    .brand-image {
+        text-align: center;
+        filter: grayscale(100%);
+        @include transition;
+        opacity: .4;
+
+        &:hover {
+            filter: initial;
+            opacity: 1;
+        }
+    }
+
+    .swiper-slide.swiper-slide-active{
+        .brand-image {
+            filter: initial;
+            opacity: 1;
+        }
+    }
+}
+
+.brand-wrapper11 {
+    padding: 80px 100px;
+    background-color: $bg-color;
+    border: 1px solid $border-color;
+    border-radius: 7px;
+
+    @include breakpoint (max-lg){
+        padding: 50px;
+    }
+
+    @include breakpoint (max-md){
+        padding: 40px;
+    }
+
+    @include breakpoint (max-sm){
+        padding: 30px;
+    }
+
+    .brand-img {
+        margin-top: 20px;
+    }
+}

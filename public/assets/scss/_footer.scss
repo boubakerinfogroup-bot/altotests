@@ -1,0 +1,372 @@
+.footer-widget-wrapper {
+    padding: 70px 0 50px;
+
+
+    .single-footer-widget {
+        margin-top: 30px;
+
+        .widget-head {
+            margin-bottom: 30px;
+
+            h3 {
+                font-size: 20px;
+                color: $white;
+            }
+
+            @include breakpoint (max-sm){
+                margin-bottom: 20px;
+            }
+        }
+
+        .footer-content {
+            p {
+                color: $white;
+            }
+
+            .social-icon {
+                @include flex;
+                gap: 10px;
+                margin-top: 40px;
+
+                @include breakpoint (max-md){
+                    margin-bottom: 30px;
+                }
+
+                @include breakpoint (max-sm){
+                    margin-top: 20px;
+                }
+               
+                a {
+                    width: 35px;
+                    height: 35px;
+                    line-height: 35px;
+                    text-align: center;
+                    font-size: 16px;
+                    display: block;
+                    background: rgba(255, 255, 255, 0.10);
+                    color:  $white;
+                    -webkit-transition: all .4s ease-in-out;
+                    transition: all .4s ease-in-out;
+                    text-align: center;
+                    border-radius: 50%;
+    
+                    &:hover {
+                        background-color: $theme-color-3;
+                        color: $header-color;
+                    }
+                }
+            }
+
+            .contact-info {
+                li {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: $white;
+
+                    &:not(:last-child){
+                        margin-bottom: 15px;
+                    }
+
+                    a {
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        .list-area {
+            li {
+                font-weight: 400;
+                font-size: 16px;
+
+                &:not(:last-child){
+                    margin-bottom: 15px;
+                }
+
+                a {
+                    color: $white;
+                    position: relative;
+                    padding-left: 20px;
+
+                    &::before {
+                        position: absolute;
+                        top: 8px;
+                        left: 0;
+                        width: 6px;
+                        height: 6px;
+                        content: "";
+                        border-radius: 50%;
+                        background-color: $white;
+                        @include transition;
+                    }
+
+                    &:hover {
+                        color: $theme-color-3;
+
+                        &::before {
+                            
+                            background-color: $theme-color-3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer-bottom {
+    position: relative;
+    z-index: 9;
+
+    @include breakpoint (max-sm){
+        padding: 20px 0;
+        text-align: center;
+    }
+    
+    .footer-wrapper {
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 30px 0;
+
+       @include breakpoint (max-lg){
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center !important;
+            margin-top: 30px;
+       }
+
+        p {
+            color: #ffffffb3;
+
+            a {
+                color: #ffffffb3;
+            }
+        }
+    
+        .footer-menu {
+            @include flex;
+            gap: 20px;
+
+            @include breakpoint (max-sm){
+                flex-wrap: wrap;
+                gap: 15px;
+                justify-content: center;
+            }
+
+            li {
+                a {
+                    color: #ffffffb3;
+                    background-image: linear-gradient($theme-color,$theme-color);
+                    background-position: 0 95%;
+                    background-repeat: no-repeat;
+                    background-size: 0% 2px;
+                    display: inline-block;
+                    @include transition;
+
+                    &:hover {
+                        background-size: 100% 1px;
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+        
+        &.border-style {
+            border-top: 1px solid $text-color !important;
+        }
+    }
+
+    &.style-2 {
+        .footer-wrapper {
+            border-top: 1px solid $border-color;
+    
+            p {
+                color: $text-color;
+    
+                a {
+                    color: $theme-color-2;
+                }
+            }
+        
+            .footer-menu {
+                @include flex;
+                gap: 20px;
+    
+                @include breakpoint (max-sm){
+                    flex-wrap: wrap;
+                    gap: 15px;
+                    justify-content: center;
+                }
+    
+                li {
+                    a {
+                        color: $text-color;
+                        background-image: linear-gradient($theme-color-2,$theme-color-2);
+    
+                        &:hover {
+                            color: $theme-color-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.style-3 {
+        .footer-wrapper {
+            p {
+                a {
+                    color: $theme-color-3;
+                }
+            }
+        
+            .footer-menu {
+                li {
+                    a {
+                        background-image: linear-gradient($theme-color-3,$theme-color-3);
+    
+                        &:hover {
+                            color: $theme-color-3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.footer-section {
+    position: relative;
+    z-index: 9;
+
+    .footer-circle {
+        position: absolute;
+        top: 15%;
+        left: 5%;
+        animation: 4s ease 0s infinite alternate forwards running tpswing;
+    }
+
+    .footer-shape {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        opacity: .1;
+        z-index: -1;
+
+        img {
+            @include imgw;
+        }
+    }
+}
+
+.footer-banner-items {
+    padding: 100px 0 0;
+
+    .footer-banner {
+        padding: 50px 40px;
+        background-color: #00E2C5;
+        border-radius: 7px;
+        @include flex;
+        overflow: hidden;
+
+        @include breakpoint (max-xxl){
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        @include breakpoint (max-md){
+            justify-content: center;
+            text-align: center;
+        }
+
+        .content {
+            max-width: 295px;
+
+            p {
+                color: $header-color;
+                margin-top: 10px;
+                margin-bottom: 25px;
+            }
+
+            .theme-btn {
+                background-color: $header-color;
+                font-size: 16px;
+                font-weight: 600;
+                color: $white;
+                padding: 18px 30px;
+
+                &::after,&::before {
+                    background-color: $white;
+                }
+
+                &:hover {
+                    color: $header-color;
+                }
+            }
+        }
+
+        .thumb {
+            margin-bottom: -50px;
+            position: relative;
+            z-index: 8;
+
+            &::before {
+                position: absolute;
+                bottom: -125px;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 286px;
+                width: 286px;
+                border-radius: 50%;
+                background-color: #00C8AE;
+                content: "";
+                z-index: -1;
+            }
+        }
+
+        &.style-2 {
+            background-color: $theme-color-3;
+
+            .thumb {
+                margin-bottom: -50px;
+                position: relative;
+                z-index: 8;
+    
+                &::before {
+                    background-color: #F69B17;
+                }
+            }
+        }
+    }
+}
+
+.footer-bottom {
+    p {
+        text-align: right;
+        font-weight: 400;
+        color: $white;
+
+        @include breakpoint (max-lg){
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        a {
+            color: $theme-color;
+        }
+    }
+
+    &.style-2 {
+        border-top: 1px solid rgba(255, 255, 255, 0.10);
+        padding: 30px 0;
+        
+        p {
+            text-align: center;
+
+            a {
+                color: $theme-color-3;
+            }
+        }
+    }
+}

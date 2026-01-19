@@ -1,0 +1,143 @@
+.pricing-card-items {
+    margin-top: 30px;
+    padding: 40px 50px;
+    background-color: $white;
+    filter: drop-shadow(10px 4px 60px rgba(204, 204, 204, 0.25));
+    border: 1px solid $border-color;
+    position: relative;
+    @include transition;
+
+    .pricing-header {
+        margin-bottom: 30px;
+
+        h5 {
+            color: $theme-color;
+            margin-bottom: 10px;
+        }
+    }
+
+    .pricing-btn {
+        margin-top: 20px;
+
+        .theme-btn {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+    .pricing-list {
+        margin-top: 50px;
+        
+        li {
+            color: $header-color;
+
+            &:not(:last-child){
+                margin-bottom: 15px;
+            }
+
+            i {
+                color: $theme-color;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &.style-2 {
+
+        .post-btn {
+            background-color: $theme-color-3;
+            border-radius: 7px;
+            padding: 3px 10px;
+            display: inline-block;
+            font-size: 12px;
+            color: $header-color;
+            position: absolute;
+            top: 7px;
+            right: 7px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .pricing-btn {
+
+            .theme-btn {
+                background-color: $theme-color;
+                color: $white;
+            }
+        }
+    }
+
+    &:hover {
+        transform: translateY(-10px);
+    }
+}
+
+.pricing-section {
+	.nav {
+		border: none;
+		
+		.nav-tabs {
+			border-bottom: 0;
+			display: flex;
+			justify-content: center;
+		}
+
+		.nav-link {
+			font-size: 18px;
+			font-weight: 500;
+			text-transform: capitalize;
+			border: 0;
+			border-radius: 0;
+			padding: 7px 56px;
+			position: relative;
+			background: transparent;
+			z-index: 2;
+			color: $text-color;
+			margin-bottom: 0;
+
+			&::before {
+				position: absolute;
+				content: "";
+				right: 0px;
+				top: 50%;
+				transform: translateY(-50%) translateX(50%);
+				background: $theme-color;
+				width: 75px;
+				height: 32px;
+				border-radius: 20px;
+				border: 1px solid $theme-color;
+			}
+			&::after {
+				position: absolute;
+				content: "";
+				right: -33px;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 24px;
+				height: 24px;
+				border-radius: 50%;
+				background: #FFD25D;
+				z-index: 1;
+			}
+			&:first-child {
+				padding-left: 0;
+			}
+			&:last-child {
+				padding-right: 0;
+				&::after {
+					display: none;
+				}
+				&::before {
+					display: none;
+				}
+			}
+			&.active {
+				color: $header-color;
+
+				&::after {
+					right: 8px;
+				}
+			}
+		}
+	}
+}

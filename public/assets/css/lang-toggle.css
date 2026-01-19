@@ -1,0 +1,113 @@
+/* Language Dropdown */
+.lang-dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 0px;
+    /* Reduced from 8px */
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Force reduce gap on the enrolling button if it has large margin */
+.header-button {
+    margin-right: 10px !important;
+}
+
+.lang-drop-btn {
+    background: #f1f5f9;
+    /* Light slate background for visibility */
+    border: 1px solid #e2e8f0;
+    color: #334155;
+    padding: 6px 10px;
+    /* Compact padding */
+    font-size: 13px;
+    /* Smaller font */
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 8px;
+    /* Square-ish rounded */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    /* Tighter gap */
+    transition: all 0.3s ease;
+    height: 32px;
+    /* Fixed small height */
+}
+
+.lang-drop-btn:hover {
+    border-color: #2563eb;
+    color: #2563eb;
+    background: #f8fafc;
+}
+
+.lang-drop-btn i {
+    font-size: 12px;
+}
+
+.lang-drop-btn i.fa-globe {
+    font-size: 14px;
+}
+
+/* Dropdown Content */
+.lang-drop-content {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 120%;
+    /* Space below button */
+    background-color: #ffffff;
+    min-width: 140px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    z-index: 1000;
+    border: 1px solid #f1f5f9;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    padding: 8px;
+}
+
+/* Show Dropdown on Hover or Active Class */
+.lang-dropdown:hover .lang-drop-content,
+.lang-dropdown.active .lang-drop-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.lang-drop-content a {
+    color: #334155;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.lang-drop-content a:hover {
+    background-color: #f1f5f9;
+    color: #2563eb;
+}
+
+.lang-drop-content a.active {
+    background-color: #eff6ff;
+    color: #2563eb;
+    font-weight: 600;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 991px) {
+    .lang-dropdown {
+        margin-left: 10px;
+    }
+
+    .lang-drop-btn {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,202 @@
+.top-category-wrapper-2 {
+    background-color: $white;
+    border-radius: 10px;
+    position: relative;
+    z-index: 9;
+
+    .top-category-left-items {
+        .top-category-box {
+            padding: 40px 30px;
+            border: 1px solid $border-color;
+            @include transition;
+
+            @include breakpoint (max-md){
+                padding: 30px;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            .icon {
+                font-size: 46px;
+                color: $theme-color;
+                @include transition;
+            }
+
+            .content {
+                margin-top: 45px;
+
+                h6 {
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+
+                p {
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+            }
+
+            
+            @include breakpoint (max-xl){
+                background-color: $theme-color;
+                border: none;
+
+                .icon {
+                    color: $white;
+                }
+
+                .content {
+                    h6 {
+                        color: $white;
+                    }
+
+                    p {
+                        color: $white;
+                    }
+                }
+            }
+
+            &:hover {
+                background-color: $theme-color;
+
+                .icon {
+                    color: $white;
+                }
+
+                .content {
+                    h6 {
+                        color: $white;
+                    }
+
+                    p {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+
+    .border-left-none {
+        border-left: none !important;
+    }
+
+    .border-top-none {
+        border-top: none !important;
+    }
+
+    .border-bottom-none {
+        border-bottom: none !important;
+    }
+
+    .border-right-none {
+        border-right: none !important;
+    }
+
+    .courses-image {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include breakpoint (max-xl){
+            position: relative;
+            left: 0;
+            transform: initial;
+            text-align: center;
+        }
+
+        .bg-shape {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+        }
+    }
+}
+
+.top-category-section-2 {
+    background-color: #031F42;
+
+    .circle-shape {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .category-bottom-title {
+        @include flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 50px;
+        position: relative;
+        z-index: 9;
+
+        @include breakpoint (max-md){
+            flex-wrap: wrap;
+        }
+
+        h3 {
+            color: $white;
+            font-weight: 500;
+        }
+
+        .theme-btn {
+            padding: 16px 20px;
+            font-size: 14px;
+        }
+    }
+}
+
+.catagories-section {
+    position: relative;
+
+    .shape-1 {
+        position: absolute;
+        bottom: 0;
+        right: 5%;
+        animation: 4s ease 0s infinite alternate forwards running tpswing;
+    }
+}
+
+.catagories-box-items {
+    margin-top: 24px;
+    background-color: $white;
+    box-shadow: $shadow;
+    padding: 30px 15px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 9;
+    transition: all .35s ease-in-out; 
+
+    .icon {
+        font-size: 42px;
+        color: $header-color;
+        @include transition;
+    }
+
+    &:hover {
+        transform: translateY(-10px);
+        background-color: $theme-color;
+
+        .icon {
+            color: $white;
+        }
+
+        .content {
+            h3 {
+                a {
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    .content {
+        margin-top: 20px;
+
+        h3 {
+            font-size: 20px;
+        }
+    }
+}

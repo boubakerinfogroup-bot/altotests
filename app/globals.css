@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+  }
+
+  body {
+    @apply bg-white text-gray-900;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-600 via-primary-500 to-primary-400 bg-clip-text text-transparent;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  .container-custom {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent scrollbar width shift */
+body {
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-700;
+}
+
+/* Marquee Animation */
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+.marquee-container {
+  animation: marqueeScroll 30s linear infinite;
+}
+
+.marquee-container:hover {
+  animation-play-state: paused;
+}
+
+/* Gradient Animation for Hero Title */
+@keyframes gradient {
+
+  0%,
+  100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+}
+
+.animate-gradient {
+  animation: gradient 1.5s ease infinite;
+}
+
+/* Wave/Shimmer Effect - Like Water or Flag Waving */
+@keyframes waveWhite {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  25% {
+    background-position: 50% 60%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  75% {
+    background-position: 50% 40%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes waveYellow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  30% {
+    background-position: 60% 65%;
+  }
+
+  60% {
+    background-position: 100% 50%;
+  }
+
+  80% {
+    background-position: 40% 35%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-wave-white {
+  background: linear-gradient(110deg,
+      #ffffff 0%,
+      #ffffff 20%,
+      #e0f2fe 30%,
+      #bae6fd 40%,
+      #93c5fd 50%,
+      #bae6fd 60%,
+      #e0f2fe 70%,
+      #ffffff 80%,
+      #ffffff 100%);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: waveWhite 4s ease-in-out infinite;
+}
+
+.animate-wave-yellow {
+  background: linear-gradient(120deg,
+      #fcd34d 0%,
+      #fcd34d 15%,
+      #fbbf24 30%,
+      #f59e0b 45%,
+      #fb923c 50%,
+      #f59e0b 55%,
+      #fbbf24 70%,
+      #fcd34d 85%,
+      #fcd34d 100%);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: waveYellow 4.5s ease-in-out infinite;
+}
